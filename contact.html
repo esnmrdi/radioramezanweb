@@ -1,0 +1,102 @@
+<div id="page" dir="rtl">
+    <div class="page-content">
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="contact-bar"></div>
+        </div>
+        <div class="text-right right-80" style="padding-top: 15px;">
+            <h1 class="right-15">ارتباط با ما</h1>
+            <div class="divider-icon divider-icon-semi divider-margins top-5 bottom-5"></div>
+            <span class="right-15 color-white" style="top: 0;">درگاه تبادل نظر و اطلاعات با توسعه دهندگان</span>
+        </div>
+        <div class="scroll-fixed top-15" style="--scrollHeight: 210px;" id="contact">
+            <div class="content-boxed shadow-large bottom-15">
+                <div class="contact-form">
+                    <form action="api/contact.php" method="post" enctype="multipart/form-data"
+                        class="contact-form" id="contact-form">
+                        <fieldset>
+                            <div class="form-field form-name">
+                                <label class="contact-name-field color-theme" for="contact-name-field">نام و نام
+                                    خانوادگی:</label>
+                                <input type="text" name="contact-name-field" value=""
+                                    class="contact-field round-small required-field" id="contact-name-field" />
+                            </div>
+                            <div class="form-field form-email">
+                                <label class="contact-email-field color-theme" for="contact-email-field">ایمیل:</label>
+                                <input type="text" dir="ltr" name="contact-email-field" value=""
+                                    class="contact-field round-small required-field required-email-field"
+                                    id="contact-email-field" />
+                            </div>
+                            <div class="form-field form-subject">
+                                <label class="contact-subject-field color-theme"
+                                    for="contact-subject-field">موضوع:</label>
+                                <div class="input-style input-style-2" style="margin: 10px 0 10px 0;">
+                                    <em><i class="fas fa-angle-down"></i></em>
+                                    <select name="contact-subject-field">
+                                        <option value="آمادگی جهت همکاری" selected>آمادگی جهت همکاری</option>
+                                        <option value="حمایت مالی">حمایت مالی</option>
+                                        <option value="درخواست تبلیغات در رادیو رمضان">درخواست تبلیغات در رادیو رمضان
+                                        </option>
+                                        <option value="انتقاد و پیشنهاد">انتقاد و پیشنهاد</option>
+                                        <option value="گزارش مشکلات اپلیکیشن">گزارش مشکلات اپلیکیشن</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-field form-text">
+                                <label class="contact-message-text-area color-theme"
+                                    for="contact-message-text-area">پیام:</label>
+                                <textarea name="contact-message-text-area"
+                                    class="contact-text-area round-small required-field"
+                                    id="contact-message-text-area"></textarea>
+                            </div>
+                            <div class="form-field form-attachment">
+                                <label class="contact-attachment-field color-theme" for="contact-attachment-field">پیوست
+                                    (تصویر یا PDF با حجم کمتر از ۱۰ مگابایت):</label>
+                                <input type="file" name="contact-attachment-field"
+                                    class="upload-file button button-m button-full button-round-large shadow-small"
+                                    id="contact-attachment-field" accept="application/pdf,image/*" />
+                            </div>
+                            <div class="form-button">
+                                <input type="submit"
+                                    class="button button-m button-3d button-full button-round-large shadow-small border-green1-dark bg-green1-light contact-submit-button"
+                                    value="ارسال پیام" data-formId="contact-form" />
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="content-boxed bg-gradient-brown2 shadow-large bottom-15">
+                <div class="contact-information last-column">
+                    <div class="container">
+                        <div class="link-list link-list-light link-list-1">
+                            <a href="#">
+                                <i class="fa fa-phone color-green1-dark"></i>
+                                <span>813-7453 (438) 1+</span>
+                                <div class="button button-xxs button-3d button-round-large shadow-small border-blue2-dark bg-blue2-light"
+                                    onclick="window.open('tel:+14388137453');">
+                                    تماس تلفنی
+                                </div>
+                            </a>
+                            <a href="#">
+                                <i class="fa fa-envelope color-brown1-dark"></i>
+                                <span>radio.ramezan@gmail.com</span>
+                                <div class="button button-xxs button-3d button-round-large shadow-small border-blue2-dark bg-blue2-light"
+                                    onclick="window.open('mailto:radio.ramezan@gmail.com');">
+                                    ارسال ایمیل
+                                </div>
+                            </a>
+                            <a href="#">
+                                <i class="fab fa-telegram color-linkedin"></i>
+                                <span>RadioRamezan2@</span>
+                                <div class="button button-xxs button-3d button-round-large shadow-small border-blue2-dark bg-blue2-light"
+                                    onclick="window.open('https://t.me/radioramezan2');">
+                                    پیام به تلگرام
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer bottom-15" data-footer-load="menu-footer.html"></div>
+        </div>
+    </div>
+</div>

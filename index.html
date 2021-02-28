@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <title>رادیو رمضان</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="رادیو رمضان" content="از افطار تا سحر، همراه شما در سراسر آمریکای شمالی" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="رادیو رمضان" />
+    <meta name="viewport"
+        content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="رادیوی اینترنتی رمضان" />
+    <meta property="og:description" content="از افطار تا سحر، همراه شما در سراسر آمریکای شمالی" />
+    <meta property="og:url" content="https://www.radioramezan.com" />
+    <meta property="og:site_name" content="رادیوی اینترنتی رمضان" />
+    <meta property="og:image" content="https://www.radioramezan.com/logo.png" />
+    <meta http-equiv='cache-control' content='no-cache'>
+    <meta http-equiv='expires' content='0'>
+    <meta http-equiv='pragma' content='no-cache'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Poppins:200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Roboto:300,300i,400,400i,500,500i,700,700i,900,900i&display=swap" />
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="stylesheet" type="text/css" href="styles/framework.css" />
+    <link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png" />
+    <link rel="stylesheet" type="text/css" href="styles/plyr.css" />
+    <link rel="stylesheet" type="text/css" href="styles/glide.core.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/glide.theme.min.css" />
+    <link rel="manifest" id="manifest-pwa" href="_manifest.json" data-pwa-version="set_by_pwa.js">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)"
+        href="app/splash/iphonexsmax.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)"
+        href="app/splash/iphonexr.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)"
+        href="app/splash/iphonexs.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3)"
+        href="app/splash/iphoneplus.png">
+    <link rel="apple-touch-startup-image"
+        media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)"
+        href="app/splash/iphoneregular.png">
+</head>
+
+<body class="theme-dark" data-highlight="gray2">
+    <div id="outer-wrapper">
+        <div id="inner-wrapper">
+            <!-- loading spinner -->
+            <div id="page-preloader">
+                <div class="loader-main">
+                    <div class="preload-spinner border-highlight"></div>
+                </div>
+            </div>
+            <!-- player -->
+            <div class="header header-fixed shadow-large">
+                <a style="position: fixed; width: 30px; right: 10px; top: 57%; transform: translateY(-57%); z-index: 100; color: inherit;" data-menu="menu-main">
+                    <i class="fas fa-bars font-20"></i>
+                </a>
+                <audio id="plyr-obj" crossorigin></audio>
+                <audio id="azan-alert"></audio>
+                <audio id="tune"></audio>
+            </div>
+            <!-- header -->
+            <div class="page-title-large color-white float-right">
+                <a href="#" class="shadow-large"></a>
+            </div>
+            <!-- page content loads here -->
+            <div data-height="205" class="page-title-bg opacity-90 bg-dark2-dark"></div>
+            <!-- footer Menu -->
+            <div id="footer-menu" class="footer-menu-5-icons footer-menu-style-1 shadow-large">
+                <a id="settings-tab" href="#" onclick="loadPage('settings');">
+                    <i data-feather="settings" data-feather-line="2" data-feather-size="21"
+                        data-feather-color="red2-dark" data-feather-bg="red2-fade-light"></i>
+                    <span>تنظیمات</span>
+                </a>
+                <a id="owghat-tab" href="#" onclick="loadPage('owghat');">
+                    <i data-feather="clock" data-feather-line="2" data-feather-size="21" data-feather-color="teal-dark"
+                        data-feather-bg="teal-fade-light"></i>
+                    <span>اوقات</span>
+                </a>
+                <a id="radio-tab" href="#" onclick="loadPage('radio');">
+                    <i data-feather="volume-2" data-feather-line="2" data-feather-size="21"
+                        data-feather-color="blue2-dark" data-feather-bg="blue2-fade-dark"></i>
+                    <span>رادیو</span>
+                </a>
+                <a id="prayers-tab" href="#" onclick="loadPage('prayers');">
+                    <i data-feather="book-open" data-feather-line="2" data-feather-size="21"
+                        data-feather-color="brown1-dark" data-feather-bg="brown1-fade-light"></i>
+                    <span>ادعیه</span>
+                </a>
+                <a id="qibla-tab" href="#" onclick="loadPage('qibla');">
+                    <i data-feather="compass" data-feather-line="2" data-feather-size="21"
+                        data-feather-color="green2-dark" data-feather-bg="green2-fade-light"></i>
+                    <span>قبله نما</span>
+                </a>
+                <div class="clear"></div>
+            </div>
+            <!-- main sidebar menu -->
+            <div id="menu-main" class="menu menu-box-right menu-box-detached round-medium shadow-large"
+                data-menu-width="240" data-menu-effect="menu-over" data-menu-load="menu-main.html"></div>
+            <!-- share menu -->
+            <div id="menu-share" class="menu menu-box-bottom menu-box-detached round-medium shadow-large"
+                data-menu-height="" data-menu-effect="menu-over" data-menu-load="menu-share.html"></div>
+            <!-- cities menu -->
+            <div id="menu-cities" class="menu menu-box-bottom menu-box-detached round-medium shadow-large"
+                data-menu-height="" data-menu-effect="menu-over" data-menu-load="menu-cities.html"></div>
+            <!-- prayer menu -->
+            <div id="menu-prayer" class="menu menu-box-modal round-medium shadow-large" data-menu-height=""
+                data-menu-width="310" data-menu-effect="menu-over" data-menu-load="menu-prayer.html"></div>
+            <!-- install PWA on Android menu -->
+            <div id="menu-install-pwa-android" class="menu menu-box-bottom menu-box-detached round-medium shadow-large"
+                data-menu-height="" data-menu-effect="menu-over" data-menu-load="menu-install-pwa-android.html"></div>
+            <!-- install PWA on Android menu -->
+            <div id="menu-install-pwa-ios" class="menu menu-box-bottom menu-box-detached round-medium shadow-large"
+                data-menu-height="" data-menu-effect="menu-over" data-menu-load="menu-install-pwa-ios.html"></div>
+            <!-- update menu -->
+            <div id="menu-update" class="menu menu-box-modal round-medium shadow-large" data-menu-height=""
+                data-menu-width="310" data-menu-effect="menu-over" data-menu-load="menu-update.html"></div>
+            <!-- walkthrough menu -->
+            <div id="menu-walkthrough" class="menu menu-box-modal round-medium shadow-large" data-menu-height=""
+                data-menu-width="310" data-menu-effect="menu-over" data-menu-load="menu-walkthrough.html"></div>
+            <div class="menu-hider"></div>
+            <!-- snack bars -->
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="location-not-available">
+                    <i class="fas fa-times-circle"></i>
+                    دسترسی به موقعیت وجود ندارد.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="no-location-support">
+                    <i class="fas fa-times-circle"></i>
+                    مرورگر قابلیت مکان یابی ندارد.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="city-not-exists">
+                    <i class="fas fa-times-circle"></i>
+                    رادیو رمضان در شهر شما فعال نیست.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-green2-dark" id="message-sent-success">
+                    <i class="fas fa-check-circle"></i>
+                    پیام شما با موفقیت ارسال شد.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="contact-name-field-error">
+                    <i class="fas fa-times-circle"></i>
+                    نام و نام خانوادگی الزامی است.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="contact-email-field-error">
+                    <i class="fas fa-times-circle"></i>
+                    ایمیل الزامی است.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="contact-email-field-error-2">
+                    <i class="fas fa-times-circle"></i>
+                    ایمیل وارد شده معتبر نیست.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="contact-message-text-area-error">
+                    <i class="fas fa-times-circle"></i>
+                    پیامی نوشته نشده است.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-yellow2-dark" id="no-prayer-audio-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    صوت قرائت این دعا موجود نیست.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-red2-dark" id="ios-install-error">
+                    <i class="fas fa-times-circle"></i>
+                    از گزینه «Add to Home Screen» در مرورگر استفاده کنید.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-yellow2-dark" id="already-installed-error">
+                    <i class="fas fa-exclamation-circle"></i>
+                    اپلیکیشن قبلا نصب شده است!
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-green2-dark" id="sleep-timer-active-success">
+                    <i class="fas fa-check-circle"></i>
+                    تایمر خاموشی فعال شد.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-yellow2-dark" id="sleep-timer-inactive-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    تایمر خاموشی قبلی غیرفعال شد.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-yellow2-dark" id="fullscreen-prayer-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    این امکان در نسخه های آتی افزوده می شود.
+                </a>
+            </div>
+            <div class="snackbars snackbars-boxed snackbar-round">
+                <a href="#" class="bg-yellow2-dark" id="schedule-warning">
+                    <i class="fas fa-exclamation-circle"></i>
+                    این امکان در نسخه های آتی افزوده می شود.
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- scripts -->
+    <script type="text/javascript" src="scripts/jquery.min.js"></script>
+    <script type="text/javascript" src="scripts/pwa.js"></script>
+    <script type="text/javascript" src="scripts/hls.min.js"></script>
+    <script type="text/javascript" src="scripts/plyr.js"></script>
+    <script type="text/javascript" src="scripts/moment-with-locales.min.js"></script>
+    <script type="text/javascript" src="scripts/moment-timezone-with-data.min.js"></script>
+    <script type="text/javascript" src="scripts/moment-hijri.js"></script>
+    <script type="text/javascript" src="scripts/moment-jalaali.js"></script>
+    <script type="text/javascript" src="scripts/klokantech.min.js"></script>
+    <script type="text/javascript" src="scripts/glide.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key="></script>
+    <script type="text/javascript" src="scripts/asturlab-iife.js"></script>
+    <script type="text/javascript" src="scripts/plugins.js"></script>
+    <script type="text/javascript" src="scripts/custom.js"></script>
+    <script type="text/javascript" src="scripts/radio-ramadan.js"></script>
+    <script type="text/javascript">
+        if (os == "Desktop") {
+            $("#outer-wrapper").attr("style", "display: flex; justify-content: center;");
+            $(".page-title-bg").attr("style", "left: -2000px; right: -2000px;");
+            var appWidth;
+            var upperBound = 1366;
+            var lowerBound = 450;
+            var ratio = 0.3;
+            if (window.innerWidth >= upperBound) {
+                appWidth = ratio.toString() + " * 100vw";
+            } else if (window.innerWidth < upperBound && window.innerWidth > lowerBound) {
+                appWidth = "calc(" + (ratio * (window.innerWidth - lowerBound) / (upperBound - lowerBound)).toString() + " * 100vw + " + (parseInt(lowerBound * (upperBound - window.innerWidth) / (upperBound - lowerBound))).toString() + "px)";
+            } else {
+                appWidth = lowerBound.toString() + "px";
+            }
+            $("#inner-wrapper").attr("style", "position: relative; display: block; width: " + appWidth + ";");
+            $(".theme-dark #footer-menu").attr("style", "padding: 0 calc((100vw - " + appWidth + ") / 2);");
+            $(".theme-dark .header").attr("style", "padding: 0 calc((100vw - " + appWidth + ") / 2);");
+        }
+        initLocalStorage();
+        var initChecker = setInterval(function () {
+            var asyncCounter = parseInt(localStorage.getItem("asyncCounter"));
+            if (asyncCounter == 4) {
+                $(".loader-main").addClass("loader-inactive");
+                loadPlyr();
+                loadPage("radio");
+                clearInterval(initChecker);
+            }
+        }, 100);
+    </script>
+</body>
+
+</html>

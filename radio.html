@@ -1,0 +1,98 @@
+<div id="page" dir="rtl">
+    <div class="page-content">
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="radio-bar"></div>
+        </div>
+        <div class="text-left left-5">
+            <a href="#" class="chip chip-small bg-dark1-dark bottom-5">
+                <i class="fas fa-moon bg-green1-dark"></i>
+                <span class="color-white" id="hijri-date"></span>
+            </a>
+            <a href="#" class="chip chip-small bg-dark1-dark top-15 bottom-5">
+                <i class="fas fa-cross bg-green1-dark"></i>
+                <span class="color-white" id="gregorian-date"></span> </a><br />
+            <a href="#" class="chip chip-small bg-dark1-dark bottom-0">
+                <i class="fas fa-sun bg-green1-dark"></i>
+                <span class="color-white" id="jalaali-date"></span>
+            </a>
+            <a href="#" class="chip chip-small bg-dark1-dark bottom-0 cities-btn">
+                <i class="fas fa-map-marker-alt bg-teal-dark"></i>
+                <span class="color-white" id="city"></span>
+            </a>
+        </div>
+        <div class="scroll-fixed top-15" style="--scrollHeight: 210px;" id="radio">
+            <div class="content-boxed content-boxed-full bottom-15 shadow-large">
+                <a href="#" data-height="calc(100vh - 230px)" class="caption bottom-0">
+                    <div class="caption-bg bg-0"></div>
+                    <div class="caption-overlay bg-gradient-fade"></div>
+                </a>
+                <div class="center-text"
+                    style="position: absolute; top: 20px; z-index: 100; display: table; table-layout: auto; width: 100%;">
+                    <div style="display: table-cell;">
+                        <i data-feather="sunrise" data-feather-line="3" data-feather-size="25"
+                            data-feather-color="dark1-light"></i><br />
+                        <span class="color-black bolder">اذان صبح</span><br />
+                        <span class="color-black bolder" id="sobh"></span>
+                    </div>
+                    <div style="display: table-cell;">
+                        <i data-feather="sun" data-feather-line="3" data-feather-size="25"
+                            data-feather-color="dark1-light" class="rotating"></i><br />
+                        <span class="color-black bolder">اذان ظهر</span><br />
+                        <span class="color-black bolder" id="zohr"></span>
+                    </div>
+                    <div style="display: table-cell;">
+                        <i data-feather="sunset" data-feather-line="3" data-feather-size="25"
+                            data-feather-color="dark1-light"></i><br />
+                        <span class="color-black bolder">اذان مغرب</span><br />
+                        <span class="color-black bolder" id="maghreb"></span>
+                    </div>
+                </div>
+                <div class="center-text"
+                    style="position: absolute; top:115px; z-index: 100; display: table; table-layout: auto; width: calc(100% - 60px); margin: auto 30px;">
+                    <div style="display: table-cell;">
+                        <span class="color-black bolder">طلوع آفتاب</span><br />
+                        <span class="color-black bolder" id="sunrise"></span>
+                    </div>
+                    <div style="display: table-cell;">
+                        <span class="color-black bolder">غروب آفتاب</span><br />
+                        <span class="color-black bolder" id="sunset"></span>
+                    </div>
+                </div>
+                <div id="next-program-container" class="right-15" style="position: absolute; bottom: calc(55px + (5 / 32) * (100vw - 30px)); z-index: 100;">
+                    <div class="float-right">
+                        <a href="#" class="chip chip-small bg-dark2-dark">
+                            <i class="fas fa-hand-point-left bg-yellow2-dark"></i>
+                            <span class="color-white">برنامه بعد</span>
+                        </a>
+                        <div id="next-program" class="top-5 float-left" style="width: calc(100vw - 175px); color: rgba(100,100,100);">
+                            (این ماژول موقتا غیر فعال است)
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+                <div id="radio-buttons-container" class="right-15 left-15"
+                    style="position: absolute; bottom: calc(15px + (5 / 32) * (100vw - 30px)); z-index: 100; width: calc(100% - 30px);">
+                    <div class="one-third">
+                        <a href="#" id="prayer-of-day-btn"
+                            class="button button-m button-3d button-full button-round-large shadow-large border-red1-dark bg-red1-light"
+                            data-vibrate="20" data-menu="menu-prayer"><i class="fas fa-sign-language"></i> دعای روز</a>
+                    </div>
+                    <div class="one-third">
+                        <a href="#" id="radio-btn"
+                            class="button button-m button-3d button-full button-round-large shadow-large border-blue2-dark bg-blue2-light"
+                            data-vibrate="20"><i class="fas fa-headphones"></i>
+                            رادیو</a>
+                    </div>
+                    <div class="one-third last-column">
+                        <a href="#"
+                            class="button button-m button-3d button-full button-round-large shadow-large border-teal-dark bg-teal-light cities-btn"
+                            data-vibrate="20" data-menu="menu-cities"><i class="fas fa-map-marked-alt"></i> شهر</a>
+                    </div>
+                </div>
+                <div style="position: absolute; bottom: 0; z-index: 100; width: 100%;">
+                    <img id="banner" class="ad-full-width">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
